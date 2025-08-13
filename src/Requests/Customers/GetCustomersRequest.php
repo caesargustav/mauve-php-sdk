@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace CaesarGustav\MauveApi\Requests\Customers;
 
 use Saloon\Enums\Method;

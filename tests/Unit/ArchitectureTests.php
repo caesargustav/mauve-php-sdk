@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 arch()
     ->expect('CaesarGustav\MauveApi\Connectors')
-    ->toExtend(\Saloon\Http\Connector::class)
+    ->toExtend(Saloon\Http\Connector::class)
     ->toHaveSuffix('Connector');
 
 arch()
     ->expect('CaesarGustav\MauveApi\Requests')
-    ->toExtend(\Saloon\Http\Request::class)
+    ->toExtend(Saloon\Http\Request::class)
     ->toHaveSuffix('Request');

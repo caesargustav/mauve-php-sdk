@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace CaesarGustav\MauveApi\Connectors;
 
 use Saloon\Http\Auth\BasicAuthenticator;

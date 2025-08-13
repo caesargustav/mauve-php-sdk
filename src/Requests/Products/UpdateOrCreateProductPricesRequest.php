@@ -8,7 +8,7 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
-class UpdateStocksRequest extends Request
+class UpdateOrCreateProductPricesRequest extends Request
 {
     use HasJsonBody;
 
@@ -16,6 +16,6 @@ class UpdateStocksRequest extends Request
 
     public function resolveEndpoint(): string
     {
-        return '/stocks';
+        return '/prices';
     }
 }

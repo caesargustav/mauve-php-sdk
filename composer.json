@@ -1,7 +1,7 @@
 {
     "name": "caesargustav/mauve-php-sdk",
     "description": "A PHP HTTP Client for the Mauve Mailorder API",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "keywords": [
         "php",
         "client",
