@@ -21,6 +21,16 @@ class MauveConnector extends Connector implements Cacheable
         return 'https://api.mauve.de';
     }
 
+    public function resolveCacheDriver(): Driver
+    {
+        return $this->cacheDriver;
+    }
+
+    public function cacheExpiryInSeconds(): int
+    {
+        return $this->cacheExpiryInSeconds;
+    }
+
     protected function defaultAuth(): BasicAuthenticator
     {
         return new BasicAuthenticator($this->username, $this->password);
@@ -32,15 +42,5 @@ class MauveConnector extends Connector implements Cacheable
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
         ];
-    }
-
-    public function resolveCacheDriver(): Driver
-    {
-        return $this->cacheDriver;
-    }
-
-    public function cacheExpiryInSeconds(): int
-    {
-        return $this->cacheExpiryInSeconds;
     }
 }

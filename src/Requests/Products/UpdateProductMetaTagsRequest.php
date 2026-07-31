@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace CaesarGustav\MauveApi\Requests\Products;
 
+use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
-class UpdateProductMetaTagsRequest extends Request
+class UpdateProductMetaTagsRequest extends Request implements HasBody
 {
     use HasJsonBody;
 
@@ -18,6 +19,6 @@ class UpdateProductMetaTagsRequest extends Request
 
     public function resolveEndpoint(): string
     {
-        return '/products'.$this->sku.'/meta_tags';
+        return '/products/'.$this->sku.'/meta_tags';
     }
 }
